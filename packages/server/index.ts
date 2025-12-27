@@ -8,13 +8,13 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', (req: Request, res: Response) => {
-    res.send('hello');
+  res.send('hello');
 });
 
 app.get('/api/hello', (req: Request, res: Response) => {
-    res.json({ message: 'hi bitch' });
+  res.json({ message: 'hi bitch' });
 });
 
 app.listen(port, () => {
-    console.log(`App is running on http://localhost:${port}`);
+  console.log(`App is running on http://localhost:${port}`);
 });

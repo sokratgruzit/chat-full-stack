@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
-import { Button } from "./components/ui/button";
+import { useEffect, useState } from 'react';
+import { Button } from './components/ui/button';
 
 function App() {
   const [msg, setMsg] = useState('');
-  
+
   useEffect(() => {
-    fetch("/api/hello")
-    .then(res => res.json())
-    .then(data => setMsg(data.message));
+    fetch('/api/hello')
+      .then((res) => res.json())
+      .then((data) => setMsg(data.message));
   }, []);
 
   return (
@@ -15,7 +15,7 @@ function App() {
       <p className="font-bold text-3xl">{msg}</p>
       <Button>Click me</Button>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
