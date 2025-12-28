@@ -16,6 +16,26 @@ A cutting-edge Full-Stack AI Chatbot application built with **Bun**, **React 19*
 
 ---
 
+## 🛠 Advanced Configuration & DX
+
+### 🤖 Prompt Engineering & Optimization
+
+The system uses a sophisticated prompt construction logic instead of hardcoded strings:
+
+- **Dynamic Templating**: System instructions are stored in `.txt` files and injected with context from `.md` knowledge bases using a `{{parkInfo}}` placeholder system.
+- **Context Preservation**: Implemented using a `Map`-based repository pattern to store and retrieve `previous_response_id`, enabling the AI to maintain complex, multi-turn conversations.
+- **Optimized Parameters**: Tailored `temperature: 0.2` for high precision and `max_output_tokens: 200` to balance response depth with cost-efficiency.
+
+### 🏗 Git Workflow & Quality Control
+
+A professional Developer Experience (DX) is enforced via automated Git Hooks:
+
+- **Husky & lint-staged**: Configured to intercept every commit.
+- **Automated Formatting**: Runs **Prettier** (`--write`) automatically on all staged files (`.ts`, `.tsx`, `.css`, `.json`).
+- **Format on Commit**: Ensures that even if a developer forgets to format a file in the IDE, the repository remains consistent and clean.
+
+---
+
 ## 🛠 Tech Stack
 
 ### Frontend
